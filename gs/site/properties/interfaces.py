@@ -18,8 +18,10 @@ class IGSSiteOptions(zope.interface.Interface):
 
     canonicalPort = zope.schema.Int(title=u"The port that should be used for this site",
                                   default=8080,
+                                  constraint=lambda x: x >= 1 and x <= 65535,
                                   required=False)
-
 
 class GSSiteOptionFactory(GSOptionConverterFactory):
     interface = IGSSiteOptions
+    descriminators = ('site_id',)
+    
