@@ -8,8 +8,8 @@ version = get_version()
 setup(name='gs.site.properties',
     version=version,
     description="Get and set options related to an individual groupserver site.",
-    long_description=open("README.txt").read() + "\n" +
-                      open(os.path.join("docs", "HISTORY.txt")).read(),
+    long_description=open("README.rst").read() + "\n" +
+                      open(os.path.join("docs", "HISTORY.rst")).read(),
     classifiers=[
       "Development Status :: 4 - Beta",
       "Environment :: Web Environment",
